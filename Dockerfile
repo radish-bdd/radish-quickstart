@@ -10,4 +10,4 @@ WORKDIR /test
 
 ENV PWD /test
 
-CMD PYTHONPATH=. radish features/
+CMD PYTHONPATH=src/ radish features/
