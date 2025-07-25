@@ -1,9 +1,8 @@
-FROM debian:stretch
+FROM python:3.12-slim-bookworm
 MAINTAINER Timo Furrer <tuxtimo@gmail.com
 
-RUN apt-get update
-RUN apt-get install --yes python3-pip
-RUN pip3 install radish-bdd
+RUN python -m pip install radish-bdd
+RUN python -m pip install tox
 
 ADD . /test
 WORKDIR /test
